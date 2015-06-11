@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "解放右鍵",
+  "description": "再也不用按好幾下才能解除右鍵鎖定了！",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": { "64": "icon.png" },
+    "default_title": "解放右鍵",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery.min.js","content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {"64": "icon.png"}
+}
